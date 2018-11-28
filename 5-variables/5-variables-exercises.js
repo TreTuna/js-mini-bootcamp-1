@@ -7,9 +7,9 @@
 
 // Basic Requirements
 
-// 1. Fix each of the following variable declarations in a console-- some are
-// syntactically invalid, some are disobey style guidelines, and some are just
-// weird.
+// 1. Fix each of the following variable declarations in a console -- some are
+//    syntactically invalid, some are disobey style guidelines, and some are just
+//    weird.
 
 var "animal" = "monkey";
 var "monkey" = animal;
@@ -21,17 +21,17 @@ var isTenEven = 10 % 2 = 0;
 
 // 2. Perform the following in the console:
 
-// Create a variable`firstName` and assign your first name to it.
+// Create a variable `firstName` and assign your first name to it.
 // Create another variable, `lastName`, and assign your last name to it.
-// Have a middle name ? If so, repeat the process.
-// Now, create a variable`fullName` and assign your full name to it by using
+// Have a middle name? If so, repeat the process.
+// Now, create a variable `fullName` and assign your full name to it by using
 // the above variables.
 
-// 3. For each of the following code blocks, ** use a whiteboard(or a piece of paper) ** to reason about
-//    what the value of`x` is supposed to be on the last line.Once you have
-//    arrived at a conclusion that you are comfortable with, enter the lines into a
-//    console and check your answer.Was your hypothesis correct ? If not, ensure
-//    that you understand why(talk with a classmate, or ask for help).
+// 3. For each of the following code blocks, **use a whiteboard (or a piece of paper)**
+//    to reason about what the value of `x` is supposed to be on the last line.
+//    Once you have arrived at a conclusion that you are comfortable with, enter
+//    the lines into a console and check your answer. Was your hypothesis correct?
+//    If not, ensure that you understand why (talk with a classmate, or ask for help).
 
 var x = 5;
 x + 10;
@@ -56,7 +56,7 @@ x = x + y;
 x; // => ???
 
 // 4. Write a function called `counter` that, when invoked, always returns a number
-//    that is * one more * than the previous invocation.For instance:
+//    that is *one more* than the previous invocation. For instance:
 
 function counter() {
   // TODO: your code here
@@ -75,10 +75,10 @@ counter(); // => 3
 
 // 1. In a previous module you wrote a function called `guessMyNumber` that
 //    simulated a guessing game: the idea is that the function picks a random
-//    number between`0` and`5`, and you invoke the function with your guess-- if
+//    number between `0` and `5`, and you invoke the function with your guess -- if
 //    you and the function are thinking of the same number, you win! Otherwise, the
-//    function informs you that your guess was incorrect.A version of this game
-//    might look like this(the`randInt` function is included for convenience):
+//    function informs you that your guess was incorrect. A version of this game
+//    might look like this (the`randInt` function is included for convenience):
 
 function guessMyNumber(n) {
   if (n > 5) {
@@ -97,33 +97,32 @@ function randInt(n) {
 // affirm that you understand how they work; then, answer the following
 // questions:
 
-//  At present, the guess should be between`0` and`5`.We can think of`5` as
-// the * upper bound * of the guess.How many times is the * upper bound *
-// repeated ? What if we wanted to change the upper bound to`6` ? How many
-// changes would be required ?
+// At present, the guess should be between `0` and `5`.We can think of `5` as
+// the *upper bound* of the guess. How many times is the *upper bound*
+// repeated? What if we wanted to change the upper bound to `6`? How many
+// changes would be required?
 
-// Create a variable called`upperBound` to hold the upper bound, and then
-// reference it instead of the number`5`.If you were asked to change the
-// upper bound to some other number(* e.g.* `7`), you should only have to make
+// Create a variable called `upperBound` to hold the upper bound, and then
+// reference it instead of the number `5`. If you were asked to change the
+// upper bound to some other number (e.g. `7`), you should only have to make
 // one change.
 
-// Modify`guessMyNumber` so that if the guess is incorrect, `guessMyNumber`
-// includes the correct guess in its output, * e.g.* `"Nope! The correct number
+// Modify `guessMyNumber` so that if the guess is incorrect, `guessMyNumber`
+// includes the correct guess in its output, e.g. `"Nope! The correct number
 // was: X"` (where`X` would have been the correct number).
 
 // 2. At present, the guessing game picks a new random number every time it is
-//    "played"(invoked).Now that you know how to make information * persistent *
+//    "played" (invoked). Now that you know how to make information *persistent*
 //    between function invocations, change the guessing game so that it picks a
-//    random number once and allows you to guess until you get the correct
-//    answer.
+//    random number once and allows you to guess until you get the correct answer.
 
 // 3. It would be really cool if, after the answer was guessed, the message
 //    included the number of guesses it had taken to find the answer; for example,
 //    "You guessed my number in 3 guesses."
 
-// Tangent Problem: What happens if you get the number right on the
-// first try?Does it say, "You guessed my number in 1 guesses." ? If so,
-// perhaps the wording should be different ? Some better ideas are:
+// Tangent Problem: What happens if you get the number right on the first try?
+// Does it say, "You guessed my number in 1 guesses."? If so, perhaps the
+// wording should be different? Some better ideas are:
 
 // "You guessed my number in 1 guess."
 // "Congratulations! You guessed my number on the first try!"
@@ -138,10 +137,10 @@ function randInt(n) {
 
 // 6. Whenever a player wins, increase the difficulty by increasing the
 //    `upperBound`; whenever a player loses, decrease the difficulty by
-//     decreasing the`upperBound`.
+//    decreasing the `upperBound`.
 
-// 7. Implement a high / low hinting system to tell the the user that the guess
-//    is either too high or too low.You may want to increase the`upperBound` on
+// 7. Implement a high/low hinting system to tell the the user that the guess
+//    is either too high or too low. You may want to increase the `upperBound` on
 //    the guess.
 
 // Advanced
@@ -157,22 +156,22 @@ function randInt(n) {
 
 // 2. Execute guessMyNumber with guess:
 
-// If the guess was too high, repeat(2) where:
+// If the guess was too high, repeat (2) where:
 // the new guess is half of the difference of guess and lowerBound
 // the new upperBound is guess
-// If the guess was too low, repeat(2) where:
+// If the guess was too low, repeat (2) where:
 // The new guess is half of the difference of upperBound and guess
 // The new lowerBound is guess
 // If the guess was correct stop.
 
 // Your task is to write a function that implements the above algorithm
-// to play the game on your behalf.The first thing that you will need to
-// do is create another version of`guessMyNumber` that returns output that
-// will be easier for another function to work with, * e.g.* use`1` for too
+// to play the game on your behalf. The first thing that you will need to
+// do is create another version of `guessMyNumber` that returns output that
+// will be easier for another function to work with, e.g. use `1` for too
 // high, `-1` for too low, `0` for correct.
 
-// Relative to * upperBound *, how many guesses does it take on average to
-// guess correctly ?
+// Relative to *upperBound*, how many guesses does it take on average to
+// guess correctly?
 
 // Some recommendations:
 
@@ -180,5 +179,5 @@ function randInt(n) {
 // Play the existing game yourself using the above steps to get an
 // idea of how the algorithm works.
 // Work with a partner.
-// Read about`console.log` on MDN (https://developer.mozilla.org/en-US/docs/Web/API/Console/log)
+// Read about `console.log` on MDN (https://developer.mozilla.org/en-US/docs/Web/API/Console/log)
 // and use it to help with debugging.

@@ -21,8 +21,8 @@
 // 3. Evaluate each of the following expressions first on a whiteboard, and then in a
 //    console:
 
-1 > 2 || 2 > 2 || 3 > 2; /*? */
-5 < 5 || 75 < 74; /*? */
+1 > 2 || 2 > 2 || 3 > 2;
+5 < 5 || 75 < 74;
 
 // Conditionals: `else if` & `else`
 
@@ -39,10 +39,10 @@ function bouncer(name, age) {
   return "Welcome, " + name;
 }
 
-bouncer("Tre", 36) /*? */
-bouncer("Adrian", 3) /*? */
-bouncer("Joe", 36) /*? */
-bouncer("joe", 36) /*? */
+bouncer("Tre", 36)
+bouncer("Adrian", 3)
+bouncer("Joe", 36)
+bouncer("joe", 36)
 
 
 // 2. Write a function called `scoreToGrade` that accepts a *number* as a parameter
@@ -213,11 +213,11 @@ function bouncer(name, age) {
 }
 
 
-bouncer("Tre", 36) /*? */
-bouncer("Adrian", 3) /*? */
-bouncer("Joe", 36) /*? */
-bouncer("joe", 36) /*? */
-bouncer("Oliver", 18) /*? */
+bouncer("Tre", 36)
+bouncer("Adrian", 3)
+bouncer("Joe", 36)
+bouncer("joe", 36)
+bouncer("Oliver", 18)
 
 // 2. You should have noticed a large amount of repetitive code when modifying
 //    `scoreToGrade` to accommodate `+` or `-` grades. When we do lots of repetitive
@@ -237,10 +237,10 @@ function letterGrade(letter, score) {
 }
 
 // These are examples of what a *working* function would output.
-letterGrade('A', 95); /*? */// => 'A'
-letterGrade('A', 91); /*? */// => 'A-'
-letterGrade('B', 88); /*? */// => 'B+'
-letterGrade('monkey', 160); /*? */// => 'monkey-'
+letterGrade('A', 95);// => 'A'
+letterGrade('A', 91);// => 'A-'
+letterGrade('B', 88);// => 'B+'
+letterGrade('monkey', 160);// => 'monkey-'
 
 // Finally, use `letterGrade` to remove the repetition in `scoreToGrade`.
 
@@ -277,15 +277,15 @@ function or(arg1, arg2) {
   return !(!arg1 && !arg2)
 }
 
-true || false /*? */
-true || true /*? */
-false || true /*? */
-false || false /*? */
+true || false
+true || true
+false || true
+false || false
 
-or(true, false) /*? */
-or(true, true) /*? */
-or(false, true) /*? */
-or(false, false) /*? */
+or(true, false)
+or(true, true)
+or(false, true)
+or(false, false)
 
 // Write a function `and` that works like `&&`, but only uses `!` and `||`.
 
@@ -293,12 +293,12 @@ function and(arg1, arg2) {
   return !(!arg1 || !arg2)
 }
 
-true && false /*? */
-true && true /*? */
-false && true /*? */
-false && false /*? */
+true && false
+true && true
+false && true
+false && false
 
-and(true, false) /*? */
-and(true, true) /*? */
-and(false, true) /*? */
-and(false, false) /*? */
+and(true, false)
+and(true, true)
+and(false, true)
+and(false, false)
