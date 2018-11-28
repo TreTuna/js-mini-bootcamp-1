@@ -38,7 +38,7 @@
 7 % 4; // 3
 100 % 12; // 4
 
-// What is the significance of the result ? How does the`%`(modulus) operator work?
+// What is the significance of the result? How does the `%` (modulus) operator work?
 
 // 6. Try the following:
 
@@ -57,7 +57,7 @@
 // 2. Write a string that represents your favorite food.
 "Bluefin Tuna";
 
-// 3. Use the`+` operator to combine(known as *concatenation *) two or more strings, * e.g.*:
+// 3. Use the `+` operator to combine(known as *concatenation*) two or more strings, *e.g.*:
 "Tre Ammatuna" + " " + "loves bluefin tuna.";
 
 // Your first and last names
