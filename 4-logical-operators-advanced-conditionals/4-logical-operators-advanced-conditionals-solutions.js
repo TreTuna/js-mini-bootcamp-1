@@ -14,9 +14,9 @@
 // 2. Evaluate each of the following expressions first on a whiteboard, and then in
 //    a console:
 
-!(2 >= 2);/*? */
-!(4 === 4);/*? */
-!(5 !== 5);/*? */
+!(2 >= 2); /*? */
+!(4 === 4); /*? */
+!(5 !== 5); /*? */
 
 // 3. Evaluate each of the following expressions first on a whiteboard, and then in a
 //    console:
@@ -33,17 +33,16 @@
 //    appropriate message, regardless of his age.
 
 function bouncer(name, age) {
-  if(name === "Joe" || age < 21) {
+  if (name === "Joe" || age < 21) {
     return "Go home, " + name;
   }
   return "Welcome, " + name;
 }
 
-bouncer("Tre", 36)
-bouncer("Adrian", 3)
-bouncer("Joe", 36)
-bouncer("joe", 36)
-
+bouncer("Tre", 36);
+bouncer("Adrian", 3);
+bouncer("Joe", 36);
+bouncer("joe", 36);
 
 // 2. Write a function called `scoreToGrade` that accepts a *number* as a parameter
 //    and returns a *string* representing a letter grade corresponding to that
@@ -58,7 +57,7 @@ bouncer("joe", 36)
 // 'F' < 60
 
 function scoreToGrade(score) {
-  if(score > 90) {
+  if (score > 90) {
     return "A";
   } else if (score >= 80) {
     return "B";
@@ -71,15 +70,15 @@ function scoreToGrade(score) {
   }
 }
 
-scoreToGrade(95); // => 'A'
-scoreToGrade(72); // => 'C'
+scoreToGrade(95); /*? */
+scoreToGrade(72); /*? */
 
 // 3. Modify the `scoreToGrade` function so that it returns `'INVALID SCORE'` if
 //    the score is greater than `100` or less than `0`.
 
 function scoreToGrade(score) {
-  if(score > 100 || score < 0) {
-    return "INVALID SCORE"
+  if (score > 100 || score < 0) {
+    return "INVALID SCORE";
   } else if (score > 90) {
     return "A";
   } else if (score >= 80) {
@@ -93,10 +92,10 @@ function scoreToGrade(score) {
   }
 }
 
-scoreToGrade(195); // => "INVALID SCORE"
-scoreToGrade(-95); // => "INVALID SCORE"
-scoreToGrade(95); // => 'A'
-scoreToGrade(72); // => 'C'
+scoreToGrade(195); /*? */
+scoreToGrade(-95); /*? */
+scoreToGrade(95); /*? */
+scoreToGrade(72); /*? */
 
 // More Practice
 
@@ -115,15 +114,15 @@ scoreToGrade(72); // => 'C'
 //                 else), etc.
 
 function whatToDoOutside(temperature, condition) {
-  var strStart = "The weather is ideal for: "
-  if (temperature > 70 && condition === "sunny"){
+  var strStart = "The weather is ideal for: ";
+  if (temperature > 70 && condition === "sunny") {
     return strStart + "mountain biking";
   } else if (condition === "snowy") {
     return strStart + "snowboarding";
   } else if (temperature > 85) {
-    return strStart + "swimming"
+    return strStart + "swimming";
   } else {
-    return strStart + "Meh, forget it, just chill."
+    return strStart + "Meh, forget it, just chill.";
   }
 }
 
@@ -137,168 +136,165 @@ function whatToDoOutside(temperature, condition) {
 //       you can use this function in `guessMyNumber`.
 
 function randInt(n) {
-  return Math.floor(Math.random() * (n + 1))
+  return Math.floor(Math.random() * (n + 1));
 }
 
 function guessMyNumber(n) {
-  if(n > 5) {
-    return "Guess is out of bounds (too high)."
-  } else if(randInt(5) === n) {
-    return "You guessed my number!"
+  if (n > 5 || n < 0) {
+    return "Guess is out of bounds.";
+  } else if (randInt(5) === n) {
+    return "You guessed my number!";
   } else {
-    return "Nope! That wasn't it!"
+    return "Nope! That wasn't it!";
   }
 }
 
-guessMyNumber(6)
+// guessMyNumber(6)
 
+// // 3. Modify the `scoreToGrade` function so that it returns `'A+/A-'` for
+// //    scores of 98 - 100 / 90 - 92 respectively. Apply the same logic for all other
+// //    letter grades.
 
-// 3. Modify the `scoreToGrade` function so that it returns `'A+/A-'` for
-//    scores of 98 - 100 / 90 - 92 respectively. Apply the same logic for all other
-//    letter grades.
+// function scoreToGrade(score) {
+//   if(score > 100 || score < 0) {
+//     return "INVALID SCORE"
+//   } else if (score > 98) {
+//     return "A+";
+//   } else if (score >= 93) {
+//     return "A";
+//   } else if (score >= 90) {
+//     return "A-";
+//   } else if (score >= 88) {
+//     return "B+";
+//   } else if (score >= 83) {
+//     return "B";
+//   } else if (score >= 80) {
+//     return "B-";
+//   } else if (score >= 78) {
+//     return "C+";
+//   } else if (score >= 73) {
+//     return "C";
+//   } else if (score >= 70) {
+//     return "C-";
+//   } else if (score >= 68) {
+//     return "D+";
+//   } else if (score >= 63) {
+//     return "D";
+//   } else if (score >= 60) {
+//     return "D-";
+//   } else {
+//     return "F";
+//   }
+// }
 
-function scoreToGrade(score) {
-  if(score > 100 || score < 0) {
-    return "INVALID SCORE"
-  } else if (score > 98) {
-    return "A+";
-  } else if (score >= 93) {
-    return "A";
-  } else if (score >= 90) {
-    return "A-";
-  } else if (score >= 88) {
-    return "B+";
-  } else if (score >= 83) {
-    return "B";
-  } else if (score >= 80) {
-    return "B-";
-  } else if (score >= 78) {
-    return "C+";
-  } else if (score >= 73) {
-    return "C";
-  } else if (score >= 70) {
-    return "C-";
-  } else if (score >= 68) {
-    return "D+";
-  } else if (score >= 63) {
-    return "D";
-  } else if (score >= 60) {
-    return "D-";
-  } else {
-    return "F";
-  }
-}
+// scoreToGrade(195); // => "INVALID SCORE"
+// scoreToGrade(-95); // => "INVALID SCORE"
+// scoreToGrade(95); // => 'A'
+// scoreToGrade(72); // => 'C'
 
-scoreToGrade(195); // => "INVALID SCORE"
-scoreToGrade(-95); // => "INVALID SCORE"
-scoreToGrade(95); // => 'A'
-scoreToGrade(72); // => 'C'
+// // Advanced
 
-// Advanced
+// // 1. The bar that employs our`bouncer` function has decided to do live music on
+// //    Friday and Saturday nights, and will be admitting those that are over 18 to
+// //    the bar on those nights; the catch however, is that all who are 21 or older
+// //    will need to be given a wristband to distinguish them from the minors. Modify
+// //    your `bouncer` function to handle this situation.
 
-// 1. The bar that employs our`bouncer` function has decided to do live music on
-//    Friday and Saturday nights, and will be admitting those that are over 18 to
-//    the bar on those nights; the catch however, is that all who are 21 or older
-//    will need to be given a wristband to distinguish them from the minors. Modify
-//    your `bouncer` function to handle this situation.
+// function bouncer(name, age) {
+//   var welcome = "Welcome, " + name + ".";
+//   if(name === "Joe" || age < 18) {
+//     return "Go home, " + name;
+//   } else if (age < 21) {
+//     return welcome + " Wrist please.";
+//   }
+//   return welcome;
+// }
 
-function bouncer(name, age) {
-  var welcome = "Welcome, " + name + ".";
-  if(name === "Joe" || age < 18) {
-    return "Go home, " + name;
-  } else if (age < 21) {
-    return welcome + " Wrist please.";
-  }
-  return welcome;
-}
+// bouncer("Tre", 36)
+// bouncer("Adrian", 3)
+// bouncer("Joe", 36)
+// bouncer("joe", 36)
+// bouncer("Oliver", 18)
 
+// // 2. You should have noticed a large amount of repetitive code when modifying
+// //    `scoreToGrade` to accommodate `+` or `-` grades. When we do lots of repetitive
+// //    things, that's a clear signal that there's a better way. Write a helper function
+// //    `letterGrade` that accepts two arguments, *letter* and *score*, and works as
+// //    follows:
 
-bouncer("Tre", 36)
-bouncer("Adrian", 3)
-bouncer("Joe", 36)
-bouncer("joe", 36)
-bouncer("Oliver", 18)
+// function letterGrade(letter, score) {
+//   var mod = score % 10;
+//   if (mod >= 8) {
+//     return letter + "+"
+//   } else if (mod < 3) {
+//     return letter + "-"
+//   } else {
+//     return letter
+//   }
+// }
 
-// 2. You should have noticed a large amount of repetitive code when modifying
-//    `scoreToGrade` to accommodate `+` or `-` grades. When we do lots of repetitive
-//    things, that's a clear signal that there's a better way. Write a helper function
-//    `letterGrade` that accepts two arguments, *letter* and *score*, and works as
-//    follows:
+// // These are examples of what a *working* function would output.
+// letterGrade('A', 95);// => 'A'
+// letterGrade('A', 91);// => 'A-'
+// letterGrade('B', 88);// => 'B+'
+// letterGrade('monkey', 160);// => 'monkey-'
 
-function letterGrade(letter, score) {
-  var mod = score % 10;
-  if (mod >= 8) {
-    return letter + "+"
-  } else if (mod < 3) {
-    return letter + "-"
-  } else {
-    return letter
-  }
-}
+// // Finally, use `letterGrade` to remove the repetition in `scoreToGrade`.
 
-// These are examples of what a *working* function would output.
-letterGrade('A', 95);// => 'A'
-letterGrade('A', 91);// => 'A-'
-letterGrade('B', 88);// => 'B+'
-letterGrade('monkey', 160);// => 'monkey-'
+// function scoreToGrade(score) {
+//   if(score > 100 || score < 0) {
+//     return "INVALID SCORE"
+//   } else if (score > 90) {
+//     return letterGrade("A", score);
+//   } else if (score >= 80) {
+//     return letterGrade("B", score);
+//   } else if (score >= 70) {
+//     return letterGrade("C", score);
+//   } else if (score >= 60) {
+//     return letterGrade("D", score);
+//   } else {
+//     return "F";
+//   }
+// }
 
-// Finally, use `letterGrade` to remove the repetition in `scoreToGrade`.
+// scoreToGrade(195); // => "INVALID SCORE"
+// scoreToGrade(-95); // => "INVALID SCORE"
+// scoreToGrade(98);/*? */ // => 'A'
+// scoreToGrade(95);/*? */ // => 'A'
+// scoreToGrade(72);/*? */ // => 'C'
 
+// // 3. It turns out that we can write logical *and* and logical *or* in terms of each
+// //    other and logical *not* using De Morgan's Laws.
+// //    (https://en.wikipedia.org/wiki/De_Morgan%27s_laws)
 
-function scoreToGrade(score) {
-  if(score > 100 || score < 0) {
-    return "INVALID SCORE"
-  } else if (score > 90) {
-    return letterGrade("A", score);
-  } else if (score >= 80) {
-    return letterGrade("B", score);
-  } else if (score >= 70) {
-    return letterGrade("C", score);
-  } else if (score >= 60) {
-    return letterGrade("D", score);
-  } else {
-    return "F";
-  }
-}
+// // Write a function `or` that works like `||`, but only uses `!` and `&&`.
 
-scoreToGrade(195); // => "INVALID SCORE"
-scoreToGrade(-95); // => "INVALID SCORE"
-scoreToGrade(98);/*? */ // => 'A'
-scoreToGrade(95);/*? */ // => 'A'
-scoreToGrade(72);/*? */ // => 'C'
+// function or(arg1, arg2) {
+//   return !(!arg1 && !arg2)
+// }
 
-// 3. It turns out that we can write logical *and* and logical *or* in terms of each
-//    other and logical *not* using De Morgan's Laws.
-//    (https://en.wikipedia.org/wiki/De_Morgan%27s_laws)
+// true || false
+// true || true
+// false || true
+// false || false
 
-// Write a function `or` that works like `||`, but only uses `!` and `&&`.
+// or(true, false)
+// or(true, true)
+// or(false, true)
+// or(false, false)
 
-function or(arg1, arg2) {
-  return !(!arg1 && !arg2)
-}
+// // Write a function `and` that works like `&&`, but only uses `!` and `||`.
 
-true || false
-true || true
-false || true
-false || false
+// function and(arg1, arg2) {
+//   return !(!arg1 || !arg2)
+// }
 
-or(true, false)
-or(true, true)
-or(false, true)
-or(false, false)
+// true && false
+// true && true
+// false && true
+// false && false
 
-// Write a function `and` that works like `&&`, but only uses `!` and `||`.
-
-function and(arg1, arg2) {
-  return !(!arg1 || !arg2)
-}
-
-true && false
-true && true
-false && true
-false && false
-
-and(true, false)
-and(true, true)
-and(false, true)
-and(false, false)
+// and(true, false)
+// and(true, true)
+// and(false, true)
+// and(false, false)

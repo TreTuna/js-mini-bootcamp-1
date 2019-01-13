@@ -14,11 +14,14 @@ function square(num) {
   return num * num;
 }
 
-square(10) + 2;
-square(100) + square(77);
-square(8 / 2);
-square(2 + 17);
-square(square(15));
+square(10) + 2; /*? */
+square(100) + square(77); /*? */
+square(8 / 2); /*? */
+square(2 + 17); /*? */
+square(square(15)); /*? */
+
+square(15); /* ? */
+square(225); /*? */
 
 // 2. Write a sentence in plain English describing how `square(square(15))` is evaluated.
 //    The inner function square(15) is called and returns 225, which is then passed
@@ -36,19 +39,24 @@ square(square(15));
 //    (if any) for each erroneous version? Do the errors make sense ?
 
 // function square(monkey) {
-//   return x * x;
+//   return monkey * monkey;
 // }
+
 // We never declare an argument of x, it should be monkey * monkey
 
-// function square(5) {
-//   return 5 * 5;
-// }
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+
+multiply(5, 3); /*? */
+
 // While this will return the square of 5, the argument is unneeded, and the
 // function is hard coded to the square of 5.
 
-// function square("x") {
-//   return "x" * "x";
+// function square(x) {
+//   return x * x;
 // }
+
 // We are trying to square a set of strings.
 
 // 5. Fix the invalid syntax in the following functions (you can copy and paste these
@@ -68,8 +76,10 @@ function square2(x) {
   return x * x;
 }
 
-// function (x) square3 {
-//   return x * x;
+function square3(x) {
+  return x * x;
+}
+
 function square3(x) {
   return x * x;
 }
@@ -132,7 +142,7 @@ function greeter(name) {
 // like this:
 
 function perimeterRect(l, w) {
-  return 2 * (l + w);
+  return 2 * l + 2 * w;
 }
 
 function areaSquare(side) {
@@ -140,7 +150,7 @@ function areaSquare(side) {
 }
 
 function perimeterSquare(side) {
-  return side * 4;
+  return 4 * side;
 }
 
 function areaRect(l, w) {
@@ -176,7 +186,7 @@ function perimeterTriangle(s1, s2, b) {
 }
 
 function areaCircle(r) {
-  return Math.PI * (r * r);
+  return Math.PI * square(r);
 }
 
 function circumferenceCircle(d) {
@@ -224,7 +234,7 @@ function volumeRightCircCyl(r, h) {
 }
 
 function surfaceAreaRightCircCyl(r, h) {
-  const doublePI = 2 * Math.PI;
+  var doublePI = 2 * Math.PI;
   return doublePI * (r * h) + doublePI * square(r);
 }
 
@@ -233,7 +243,7 @@ function volumeSphere(r) {
 }
 
 function surfaceAreaSphere(r) {
-  return (4 * Math.PI) * square(r);
+  return 4 * Math.PI * square(r);
 }
 
 function volumeRightCylCone(r, h) {
@@ -241,7 +251,7 @@ function volumeRightCylCone(r, h) {
 }
 
 function surfaceAreaCylCone(r, h) {
-  return Math.PI * (r * Math.sqrt((square(r) + square(h))));
+  return Math.PI * (r * Math.sqrt(square(r) + square(h)));
 }
 
 function volumeRectPyramid(l, w, h) {
@@ -249,11 +259,11 @@ function volumeRectPyramid(l, w, h) {
 }
 
 function volumeFrustrumRightCirCone(r, R, h) {
-  return (Math.PI * (square(r) + (r * R) + square(R)) * h) / 3;
+  return (Math.PI * (square(r) + r * R + square(R)) * h) / 3;
 }
 
 function surfaceAreaFrustrumRightCirCone(s, r, R) {
-  return Math.PI * (s * (R + r))
+  return Math.PI * (s * (R + r));
 }
 
 // Advanced(extra practice)
@@ -272,10 +282,10 @@ function surfaceAreaFrustrumRightCirCone(s, r, R) {
 // of a quantity of money using compound interest.
 
 function futureValue(P, i, n, t) {
-  return P * Math.pow((1 + i / n), (n * t))
+  return P * Math.pow(1 + i / n, n * t);
 }
 
-futureValue(1700, .047, 4, 6)
+futureValue(1700, 0.047, 4, 6);
 
 // Use the function to calculate what the future value of $1700(* P * = 1700)
 // deposited in a bank that pays an annual interest rate of 4.7 % (* i * = 0.047),
@@ -288,14 +298,14 @@ futureValue(1700, .047, 4, 6)
 
 function power(base, exp) {
   var result = base;
-  for(var i = 1; i < exp; i++) {
+  for (var i = 1; i < exp; i++) {
     result = result * base;
   }
   return result;
 }
 
-power(3, 3)
-Math.pow(3, 3)
+power(3, 3);
+Math.pow(3, 3);
 
 function square(n) {
   return power(n, 2);
@@ -311,6 +321,4 @@ function cube(n) {
 //    wrote. The first version of your square root function should perform no more
 //    than 3 successive averages.
 
-function sqrt(num) {
-
-}
+function sqrt(num) {}

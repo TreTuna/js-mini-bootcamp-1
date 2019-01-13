@@ -11,13 +11,13 @@
 //    syntactically invalid, some are disobey style guidelines, and some are just
 //    weird.
 
-var "animal" = "monkey";
-var "monkey" = animal;
-var x= 15;
-var y =10;
-var var = "huh?";
-var true = false;
-var isTenEven = 10 % 2 = 0;
+var animal = "monkey";
+var monkey = animal;
+var x = 15;
+var y = 10;
+var huh = "huh?";
+var testFalse = false;
+var isTenEven = 10 % 2 === 0; /*? */
 
 // 2. Perform the following in the console:
 
@@ -26,6 +26,10 @@ var isTenEven = 10 % 2 = 0;
 // Have a middle name? If so, repeat the process.
 // Now, create a variable `fullName` and assign your full name to it by using
 // the above variables.
+
+var firstName = "Tre";
+var lastName = "Ammatuna";
+var fullName = firstName + " " + lastName; /*? */
 
 // 3. For each of the following code blocks, **use a whiteboard (or a piece of paper)**
 //    to reason about what the value of `x` is supposed to be on the last line.
@@ -38,7 +42,7 @@ x + 10;
 x; // => ???
 
 var x = 17;
-x = (x + 1) / 2;
+x = (x + 1) / 2; /*? */
 x * 4;
 x; // => ???
 
@@ -50,7 +54,7 @@ x; // => ???
 
 var x = 10;
 var y = 5;
-x = (x * 4) - 3;
+x = x * 4 - 3; /*? */
 x + 17;
 x = x + y;
 x; // => ???
@@ -58,12 +62,13 @@ x; // => ???
 // 4. Write a function called `counter` that, when invoked, always returns a number
 //    that is *one more* than the previous invocation. For instance:
 
+var num = 0;
 function counter() {
-  // TODO: your code here
+  return (num = num + 1);
 }
-counter(); // => 1
-counter(); // => 2
-counter(); // => 3
+counter(); /*? */
+counter(); /*? */
+counter(); /*? */
 // etc.
 
 // HINT: You'll need a variable for this. *Where* should the variable be
@@ -90,7 +95,7 @@ function guessMyNumber(n) {
 }
 
 function randInt(n) {
-  return Math.floor(Math.random() * (n + 1))
+  return Math.floor(Math.random() * (n + 1));
 }
 
 // Read and test both of the functions in your console and
